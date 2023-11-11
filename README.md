@@ -1,2 +1,2 @@
-# pm_final
-Final project by Beketay G., Torebek A., Manat I., Pazilbek A.. CS-2118.
+# Project Management final project
+Group members: Beketay G., Torebek A., Manat I., Pazilbek A. CS-2118.
