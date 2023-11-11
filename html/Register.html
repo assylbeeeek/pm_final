@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet"  href="{{url_for('static', filename='css/Reg.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="bord">
+    <div class="inner-cont">
+    <h1>Thank you for accepting our rules and terms</h1>
+    <h2>Please provide your information below</h2>
+<form method="Post">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% endwith %}
+    <input class="form-control" type="text" placeholder="first_name" name="first_name" required>
+<br>
+    <input class="form-control" type="text" placeholder="second_name" name="second_name" required>
+<br>
+    <input class="form-control" type="text" placeholder="last_name" name="last_name" required>
+<br>
+    <input class="form-control" type="number" placeholder="age" name="age" required>
+<br>
+    <input class="form-control" type="text" placeholder="gender" name="gender" required>
+<br>
+    <input class="form-control" type="text" placeholder="nationality" name="nationality" required>
+<br>
+    <input class="form-control" type="text" placeholder="languages" name="languages">
+<br>
+    <input class="form-control" type="date" placeholder="birth_date" name="birth_date">
+<br>
+    <input class="form-control" type="text" placeholder="birth_place" name="birth_place">
+<br>
+    <input class="form-control" type = "text" placeholder="education" name="education">
+<br>
+    <input class="form-control" type = "text" placeholder="phone_number" name="phone_number">
+<br>
+    <input class="form-control" type = "text" placeholder="martial_status" name="martial_status">
+<br>
+    <input class="form-control" type = "text" placeholder="amount_of_children" name="amount_of_children">
+<br>
+<button type="submit" class="btn btn-light left">Submit</button>
+</form>
+</div>
+</div>
+</div>
+</body>

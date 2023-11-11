@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet"  href="{{url_for('static', filename='css/Reg.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+          crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+    <div class="bord">
+    <div class="inner-cont">
+    <h1>Please enter your Individual identification number (ИИН)</h1>
+<form method="Post">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <ul class=flashes>
+        {% for message in messages %}
+        <li style="color:white">{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% endwith %}
+    <input class="form-control" type="number" placeholder="ИИН" name="iin" required>
+<button type="submit" class="btn btn-light left">Submit</button>
+</form>
+</div>
+</div>
+</div>
+</body>
